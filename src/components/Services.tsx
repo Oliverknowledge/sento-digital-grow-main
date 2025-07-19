@@ -97,11 +97,13 @@ const Services = () => {
                   <div className="space-y-6">
                     <div className="flex items-center space-x-4">
                       <motion.div 
-                        className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center"
+                        className="w-16 h-16 flex items-center justify-center"
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <Icon className="w-8 h-8 text-primary" />
+                        <span className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10">
+                          <Icon className="w-8 h-8 text-primary" />
+                        </span>
                       </motion.div>
                       <div>
                         <h3 className="text-2xl font-semibold text-card-foreground">

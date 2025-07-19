@@ -2,15 +2,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero.jpeg";
 import { motion } from "framer-motion";
-import logo from "/public/logo.png";
 
 const Hero = () => {
   
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background to-accent">
       {/* Logo in top left */}
-      <div className="absolute top-8 left-8 z-20">
-        <span className="text-2xl md:text-4xl font-bold text-primary ">Sento Digital</span>
+      <div className="absolute top-6 left-6 z-20">
+        <span className="text-4xl  font-bold text-primary mb-4 block">Sento Digital</span>
       </div>
       <div className="container mx-auto px-6 py-20">
         <motion.div 
@@ -21,27 +20,23 @@ const Hero = () => {
         >
           {/* Hero Content */}
           <motion.div 
-            className="space-y-8"
+            className="flex flex-col gap-8 pt-16 md:pt-0"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="space-y-4">
               <motion.h1 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight"
+                className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-               Stop Relying on Word-of-Mouth. 
-
-              <br></br>
-                <span className="text-primary">
-                  Start Getting More Solar Leads Online.
-                </span>
+                <span className="text-foreground">Stop Relying on Word-of-Mouth.  </span>
+                <span className="text-primary"> Start Getting More Solar Leads Online.</span>
               </motion.h1>
               <motion.p 
-                className="text-xl text-muted-foreground max-w-2xl leading-relaxed"
+                className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -49,7 +44,6 @@ const Hero = () => {
                 We help solar companies and installers build a powerful digital presence and run ads that bring consistent, high-quality solar leads through one service.
               </motion.p>
             </div>
-            
             <motion.div 
               className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0, y: 20 }}
@@ -60,7 +54,7 @@ const Hero = () => {
                 <Button 
                   variant="hero" 
                   size="xl" 
-                  className="group"
+                  className="group text-base md:text-lg lg:text-xl px-6 md:px-8 py-2 md:py-3"
                   onClick={() => {
                     const el = document.getElementById('contact');
                     if (el) {
@@ -73,8 +67,8 @@ const Hero = () => {
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </motion.div>
-            </motion.div>  
             </motion.div>
+          </motion.div>
           
             
         
