@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { Analytics } from '@vercel/analytics/react';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -21,6 +21,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Analytics />
+        <SpeedInsights/>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
